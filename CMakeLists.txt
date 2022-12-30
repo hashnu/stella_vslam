@@ -176,3 +176,10 @@ if(BUILD_TESTS)
     enable_testing()
     add_subdirectory(test)
 endif()
+
+if(BUILD_JULIA)
+    add_subdirectory(jll)
+endif()
+
+#cmake -DBUILD_JULIA=ON -DCMAKE_BUILD_TYPE=Release -DJlCxx_DIR=/opt/neleus_src/libcxxwrap-julia/build/1.8.1 -DJulia_EXECUTABLE=/opt/julia-1.8.1/bin/julia -DJULIA_PKG_INSTALL_PATH=/opt/juliaDepot/packages ..
+#cmake -DUSE_OPENMP=ON -DUSE_SSE_FP_MATH=ON -DUSE_SSE_ORB=ON -DBUILD_WITH_MARCH_NATIVE=OFF -D OpenGL_GL_PREFERENCE=GLVND -DBUILD_JULIA=ON -DCMAKE_BUILD_TYPE=Release -DJlCxx_DIR=/opt/neleus_src/libcxxwrap-julia/build/1.8.1 -DJulia_EXECUTABLE=/opt/julia-1.8.1/bin/julia -DJULIA_PKG_INSTALL_PATH=/opt/juliaDepot/packages ..
