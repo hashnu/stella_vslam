@@ -3,7 +3,6 @@ devel/
 lib/
 dataset/
 vocab/
-jll/
 dependencies/
 .idea/
 cmake-build-debug/
